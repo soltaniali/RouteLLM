@@ -182,7 +182,7 @@ class SWRankingRouter(Router):
         prompt_emb = (
             (
                 OPENAI_CLIENT.embeddings.create(
-                    input=[prompt], model=self.embedding_model
+                    input=[prompt], model=self.embedding_model , encoding_format="float"
                 )
             )
             .data[0]
